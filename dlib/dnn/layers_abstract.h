@@ -2143,6 +2143,16 @@ namespace dlib
         /*!
             These functions are implemented as described in the EXAMPLE_COMPUTATIONAL_LAYER_ interface.
         !*/
+
+        dpoint map_input_to_output(const dpoint& p) const;
+        dpoint map_output_to_input(const dpoint& p) const;
+        /*!
+            These two functions are optional.  If provided, they should map between
+            (column,row) coordinates in input and output tensors of forward().  Providing
+            these functions allows you to use global utility functions like
+            input_tensor_to_output_tensor().
+        !*/
+
     };
 
 
